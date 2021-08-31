@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "/home/gildson/Área de Trabalho/2 prova/atividade1/arquivo.h"
+#include "./arquivo.h"
 #include "gtest/gtest.h"
 
 class GrafoMatrizAdjTest : public ::testing::Test {
