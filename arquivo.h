@@ -8,12 +8,11 @@ struct GrafoMatrizAdj {
     char** rotuloVertices;
     int verticesInseridos;
     int maxNumVertices;
-    //faz mais sentido ser apenas numVertices (consertar para a prox turma)
 };
 
 /**
  * Se o grafo for ponderado, inicializamos cada posicao da matriz com INT_MAX.
- * Se o grafo for n„o ponderado, inicializamos cada posicao da matriz com 0.
+ * Se o grafo for n√£o ponderado, inicializamos cada posicao da matriz com 0.
  **/
 struct GrafoMatrizAdj* inicializar(int numVertices, bool ponderado) {
     GrafoMatrizAdj* grf = (struct GrafoMatrizAdj*)malloc(sizeof(struct GrafoMatrizAdj));
@@ -49,7 +48,7 @@ int obterIndiceVertice(struct GrafoMatrizAdj* grafo, char* rotuloVertice) {
             return i;
         }
         else {
-            std::cout << "N„o contÈm o Vertice " << rotuloVertice << " ";
+            std::cout << "N√£o cont√©m o Vertice " << rotuloVertice << " ";
             return -1;
         }
     }
@@ -57,7 +56,7 @@ int obterIndiceVertice(struct GrafoMatrizAdj* grafo, char* rotuloVertice) {
 
 /**
  * Se o grafo for ponderado, usamos a variavel peso para especificar o peso da aresta.
- * Se o grafo for n„o ponderado, passaremos o valor 1 para a variavel peso, de modo que represente existÍncia da aresta.
+ * Se o grafo for n√£o ponderado, passaremos o valor 1 para a variavel peso, de modo que represente exist√™ncia da aresta.
  * Se um dos rotulos dos vertices nao existir, simplesmente nao faremos nada.
  **/
 void inserirAresta(struct GrafoMatrizAdj* grafo, char* rotuloVOrigem, char* rotuloVDestino, int peso) {
@@ -88,8 +87,8 @@ void inserirVertice(struct GrafoMatrizAdj* grafo, char* rotuloVertice) {
 }
 
 /**
- * Tomar cuidado com as diferenÁas sem‚nticas entre haver conex„o entre dois vertices em um grafo ponderado,
- * e haver conex„o entre dois vertices em um grafo nao-ponderado.
+ * Tomar cuidado com as diferen√ßas sem√¢nticas entre haver conex√£o entre dois vertices em um grafo ponderado,
+ * e haver conex√£o entre dois vertices em um grafo nao-ponderado.
  **/
 bool saoConectados(struct GrafoMatrizAdj* grafo, char* rotuloVOrigem, char* rotuloVDestino) {
     int Origem = obterIndiceVertice(grafo, rotuloVOrigem);
